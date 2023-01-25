@@ -1,0 +1,29 @@
+<section>
+    <div class="container">
+        <table class="table mt-4">
+  <thead>
+    <tr >
+      <th scope="col">No</th>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">total</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+    <tr style="line-height: 85px;">
+      <th scope="row">{{inc @index}}</th>
+      <td><img style="width:95px;height:95px;padding:0px;" src="/product-images/{{this.products._id}}.jpg"></td>
+      <td>{{this.products.name}}</td>
+      <td>&#8377;{{this.products.price}}</td>
+      <td>{{this.quantity}}</td>
+      <td>{{this.total}}</td>
+       </tr>
+    {{/each}}
+  </tbody>
+</table> 
+<hr>
+</div>
+</section>

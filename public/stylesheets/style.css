@@ -1,0 +1,101 @@
+body {
+    /* Set "my-sec-counter" to 0 */
+    counter-reset: my-sec-counter;
+  }
+  
+
+  body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+label {
+    color: #333;
+}
+
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px;
+    }
+.help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px;
+
+}
+
+
+.checkout{
+    margin-left: 70%;
+}
+.checkout h3{
+    color: rgb(70, 70, 70);
+    font-weight: bolder;
+    margin: 0px;
+}
+@media only screen and (max-width:790px){
+    .checkout{
+        margin-right: 30%;
+    }
+    .checkout h3{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .checkout a{
+        margin-left: 10%;
+        width: 100px;
+        font-size: 16px;
+    }
+}
+
+
+
+    @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)
+    {
+
+        /* Force table to not be like tables anymore */
+        table, thead, tbody, th, td, tr
+        {
+            display: block;
+        }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr
+        {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr
+        {
+            border: 1px solid #ccc;
+        }
+
+        td
+        {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+
+        td:before
+        {
+            /* Now like a table header */
+            position: absolute; /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+       
+    }
+    

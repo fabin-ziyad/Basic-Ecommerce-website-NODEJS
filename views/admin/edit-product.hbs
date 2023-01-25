@@ -1,0 +1,106 @@
+<section class="bg-light">
+  <div class="container">
+
+    <form
+      action="/admin/edit-product/{{editproduct._id}}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h2>Edit Product</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="first">Product Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              required
+              value="{{editproduct.name}}"
+            />
+          </div>
+        </div>
+        <!--  col-md-6   -->
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="last">Varient</label>
+            <input
+              type="text"
+              class="form-control"
+              name="varient"
+              value="{{editproduct.varient}}"
+              required
+            />
+          </div>
+        </div>
+        <!--  col-md-6   -->
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="company">Category</label>
+            <input
+              type="text"
+              class="form-control"
+              name="category"
+              value="{{editproduct.category}}"
+              required
+            />
+          </div>
+
+        </div>
+        <!--  col-md-6   -->
+
+        <div class="col-md-6">
+
+          <div class="form-group">
+            <label for="phone">Price</label>
+            <input
+              type="text"
+              class="form-control"
+              name="price"
+              value="{{editproduct.price}}"
+              required
+            />
+          </div>
+        </div>
+        <!--  col-md-6   -->
+      </div>
+      <!--  row   -->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="email">Image</label>
+            <input
+              type="file"
+              class="form-control"
+              name="image"
+              required
+              onchange="Newimage(event)"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="/product-images/{{editproduct._id}}.jpg"
+            style="width: 130px;height:120px;"
+            id="currentImage"
+          />
+        </div>
+      </div>
+      <!--  row   -->
+      <button type="submit" class="btn btn-primary mb-3 mt-3">Submit</button>
+      <a href="/admin" class="btn btn-primary ml-3">Cancel</a>
+    </form>
+  
+  </div>
+</section>
+
+<script>
+  function Newimage(event){
+  document.getElementById('currentImage').src=URL.createObjectURL(event.target.files[0])
+  }
+</script>

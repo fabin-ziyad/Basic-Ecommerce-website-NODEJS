@@ -1,0 +1,25 @@
+<section>
+    <div class="container bg-white border border-primary rounded mt-4 p-0" >
+        <table class="table  table-sm table-bordered" >
+             <caption class="text-center">List of users</caption>
+    <thead class="thead-dark">  
+   <tr>
+    <th scope="col" class="text-center">Sl No</th>
+    <th scope="col" class="text-center">Name</th>
+    <th scope="col" class="text-center">Email</th>
+    <th scope="col" class="text-center">Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each responses }}
+    <tr>
+      <th scope="row" class="text-center">{{inc @index}}</th>
+        <td style="font-size: 14px;">{{this.name}}</td>
+        <td style="font-size: 14px;">{{this.Email}}</td>
+        <td style="font-size: 14px;">{{this.Password}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
+    </div>
+</section>
